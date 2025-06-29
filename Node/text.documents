@@ -1,0 +1,2 @@
+Command=  npm i -g nodemon
+Command= npm i uppercase 
