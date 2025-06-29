@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+</head>
+
+<body>
+       <a href="/">Home</a>
+    <a href="/insert">Insert</a>
+    <a href="/display">Display</a>
+    <a href="/update">Update</a>
+    <a href="/search">Search</a>
+
+    <hr />
+    <table border="">
+        <tr>
+            <th>EmpId</th>
+            <th>EmpName</th>
+            <th>EmpPosition</th>
+            <th>EmpSalary</th>
+            <th>Edite</th>
+            <th>
+                Delete
+            </th>
+        </tr>
+
+        <% empData.map((key)=>{%>
+        <tr>
+                <td>
+                    <%= key.empId %>
+                </td>
+                <td>
+                    <%= key.empName %>
+                </td>
+                <td>
+                    <%= key.empPosition %>
+                </td>
+                <td>
+                    <%= key.empSalary %>
+                </td>
+                <td>
+                   <a href="/edit?id=<%= key._id%>">edit</a>
+                </td>
+                <td>
+                    <a href="/delete?id=<%= key._id%>">delete</a>
+                </td>
+            </tr>
+            <% })%>
+
+    </table>
+
+    <footer>
+        <p>This is footer Section!</p>
+    </footer>
+</body>
+
+</html>
