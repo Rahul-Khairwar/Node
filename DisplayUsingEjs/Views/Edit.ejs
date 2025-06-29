@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+</head>
+
+<body>
+    <a href="/">Home</a>
+    <a href="/insert">Insert</a>
+    <a href="/display">Display</a>
+    <a href="/update">Update</a>
+    <a href="/search">Search</a>
+
+    <hr />
+
+    <section>
+        <form action="/editsave" method="post"><br /><br />
+            <input type="hidden" name="id" value="<%= editData._id %>">
+            Enter Emp Id : <input type="text" name="empId" value="<%= editData.empId %>"><br /><br />
+            Enter Name : <input type="text" name="name" value="<%= editData.empName %> "><br /><br />
+            Enter Position : <input type="text" name="position" value="<%= editData.empPosition %>"><br /><br />
+            Enter Salary : <input type="text" name="salary" value="<%= editData.empSalary %>"><br /><br />
+
+            <button type="submit">Edit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>This is footer Section!</p>
+    </footer>
+</body>
+
+</html>
