@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="red">
+
+    <a href="/">Home</a>
+    <a href="/insert">Insert</a>
+    <a href="/display">Display</a>
+    <a href="/update"> Update</a>
+    <a href="/search"> search</a>
+    <hr size="2" color="yellow" />
+    <h1>Display employee data!!</h1>
+
+
+    <table>
+<tr>
+    <th>Empno</th>
+    <th>Name</th>
+    <th>city</th>
+    <th>salary</th>
+
+</tr>
+<% 
+
+mydata.forEach((key)=>{
+
+    %>
+    <tr>
+        <td><%= key.empno %></td>
+        <td><%= key.name %></td>
+        <td><%= key.city %></td>
+        <td><%= key.salary %></td>
+        <td>
+            <a href="/editdata?id=<%=key._id %>"></a>>edit </a>
+        </td>
+        <td><a href="/delete?id=<%=key._id %>">delete</a></td>
+    </tr>
+    <%
+   })
+%>
+    </table>
+    <hr size="2" color="white" />
+    
+</body>
+</html>
